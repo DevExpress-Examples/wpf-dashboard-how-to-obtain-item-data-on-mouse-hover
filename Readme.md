@@ -2,4 +2,4 @@
 
 This example handles the [DashboardControl.DashboardItemMouseEnter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.DashboardItemMouseEnter), [DashboardControl.DashboardItemMouseMove](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.DashboardItemMouseMove) and [DashboardControl.DashboardItemMouseLeave](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWpf.DashboardControl.DashboardItemMouseLeave) events to display a popup that contains a [Data Grid](https://docs.devexpress.com/WPF/6084/controls-and-libraries/data-grid) control to display item data when the mouse hovers over it. The data are obtained using the [e.GetUnderlyingData](DevExpress.DashboardWpf.DashboardItemMouseActionWpfEventArgs.GetUnderlyingData) property.
 
-![](~/images/ItemDataOnMouseHover.png)
+![](https://github.com/DevExpress-Examples/wpf-dashboard-how-to-obtain-item-data-on-mouse-hover/blob/18.1.5%2B/images/ItemDataOnMouseHover.png)
