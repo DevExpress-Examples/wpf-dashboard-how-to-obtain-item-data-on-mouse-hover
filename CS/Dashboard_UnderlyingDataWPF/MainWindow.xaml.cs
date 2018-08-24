@@ -1,4 +1,5 @@
 ﻿using DevExpress.DashboardCommon;
+using DevExpress.DashboardWpf;
 using System.Windows;
 
 namespace Dashboard_UnderlyingDataWPF
@@ -13,7 +14,7 @@ namespace Dashboard_UnderlyingDataWPF
             InitializeComponent();
         }
 
-        private void DashboardControl_DashboardItemMouseMove(object sender, DevExpress.DashboardWpf.DashboardItemMouseActionWpfEventArgs e)
+        private void DashboardControl_DashboardItemMouseMove(object sender, DashboardItemMouseActionWpfEventArgs e)
         {
             if (e.DashboardItemName != null)
             {
@@ -23,12 +24,12 @@ namespace Dashboard_UnderlyingDataWPF
             }
         }
 
-        private void DashboardControl_DashboardItemMouseEnter(object sender, DevExpress.DashboardWpf.DashboardItemMouseWpfEventArgs e)
+        private void DashboardControl_DashboardItemMouseEnter(object sender, DashboardItemMouseWpfEventArgs e)
         {
             tooltip.IsOpen = true;
         }
 
-        private void DashboardControl_DashboardItemMouseLeave(object sender, DevExpress.DashboardWpf.DashboardItemMouseWpfEventArgs e)
+        private void DashboardControl_DashboardItemMouseLeave(object sender, DashboardItemMouseWpfEventArgs e)
         {
             tooltip.IsOpen = false;
         }
