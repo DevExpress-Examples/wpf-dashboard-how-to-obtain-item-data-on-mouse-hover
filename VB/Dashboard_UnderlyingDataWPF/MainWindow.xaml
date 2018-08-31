@@ -16,9 +16,9 @@
     <Grid>
         <dxdash:DashboardControl
             MinHeight="150"
-            DashboardItemMouseMove="DashboardControl_DashboardItemMouseMove"
             DashboardItemMouseEnter="DashboardControl_DashboardItemMouseEnter"
             DashboardItemMouseLeave="DashboardControl_DashboardItemMouseLeave"
+            DashboardItemMouseMove="DashboardControl_DashboardItemMouseMove"
             DashboardSource="{x:Type local:SalesDashboard}" />
         <Popup x:Name="tooltip" AllowsTransparency="True">
             <Border
@@ -31,8 +31,7 @@
                     x:Name="myGrid"
                     Height="300"
                     AutoGenerateColumns="AddNew"
-                    EnableSmartColumnsGeneration="True"
-                    ItemsSource="{Binding Items}" />
+                    EnableSmartColumnsGeneration="True" />
             </Border>
         </Popup>
     </Grid>
