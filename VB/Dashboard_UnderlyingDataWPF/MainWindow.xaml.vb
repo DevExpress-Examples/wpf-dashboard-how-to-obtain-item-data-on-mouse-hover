@@ -17,16 +17,16 @@ Namespace Dashboard_UnderlyingDataWPF
             If e.DashboardItemName IsNot Nothing Then
                 Dim underlyingData As DashboardUnderlyingDataSet = e.GetUnderlyingData()
                 myGrid.ItemsSource = underlyingData
-                tooltip.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint
+                tooltipPopup.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint
             End If
         End Sub
 
         Private Sub DashboardControl_DashboardItemMouseEnter(ByVal sender As Object, ByVal e As DashboardItemMouseWpfEventArgs)
-            tooltip.IsOpen = True
+            tooltipPopup.IsOpen = True
         End Sub
 
         Private Sub DashboardControl_DashboardItemMouseLeave(ByVal sender As Object, ByVal e As DashboardItemMouseWpfEventArgs)
-            tooltip.IsOpen = False
+            tooltipPopup.IsOpen = False
         End Sub
     End Class
 End Namespace

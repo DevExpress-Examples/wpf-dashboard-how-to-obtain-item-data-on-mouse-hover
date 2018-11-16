@@ -20,7 +20,7 @@
             DashboardItemMouseLeave="DashboardControl_DashboardItemMouseLeave"
             DashboardItemMouseMove="DashboardControl_DashboardItemMouseMove"
             DashboardSource="{x:Type local:SalesDashboard}" />
-        <Popup x:Name="tooltip" AllowsTransparency="True">
+        <Popup x:Name="tooltipPopup" AllowsTransparency="True">
             <Border
                 Background="White"
                 BorderBrush="Black"
