@@ -1,32 +1,33 @@
-﻿Imports DevExpress.DashboardCommon
+Imports DevExpress.DashboardCommon
 Imports DevExpress.DashboardWpf
 Imports System.Windows
 
 Namespace Dashboard_UnderlyingDataWPF
+
     ''' <summary>
     ''' Interaction logic for MainWindow.xaml
     ''' </summary>
-    Partial Public Class MainWindow
+    Public Partial Class MainWindow
         Inherits Window
 
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
 
         Private Sub DashboardControl_DashboardItemMouseMove(ByVal sender As Object, ByVal e As DashboardItemMouseActionWpfEventArgs)
-            If e.DashboardItemName IsNot Nothing Then
+            If Not Equals(e.DashboardItemName, Nothing) Then
                 Dim underlyingData As DashboardUnderlyingDataSet = e.GetUnderlyingData()
-                myGrid.ItemsSource = underlyingData
-                tooltipPopup.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint
+                Me.myGrid.ItemsSource = underlyingData
+                tooltip.Placement = System.Windows.Controls.Primitives.PlacementMode.MousePoint
             End If
         End Sub
 
         Private Sub DashboardControl_DashboardItemMouseEnter(ByVal sender As Object, ByVal e As DashboardItemMouseWpfEventArgs)
-            tooltipPopup.IsOpen = True
+            tooltip.IsOpen = True
         End Sub
 
         Private Sub DashboardControl_DashboardItemMouseLeave(ByVal sender As Object, ByVal e As DashboardItemMouseWpfEventArgs)
-            tooltipPopup.IsOpen = False
+            tooltip.IsOpen = False
         End Sub
     End Class
 End Namespace
